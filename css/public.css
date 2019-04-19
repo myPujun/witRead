@@ -1,0 +1,67 @@
+/*flex 公共样式*/
+.flex{
+    display: flex;
+}
+.flex_j_a{
+    justify-content: space-around;
+}
+.flex_j_c{
+    justify-content: center;
+}
+.flex_a_c{
+    align-items: center;
+}
+.flex_c{
+    display: flex;
+    flex-direction: column
+}
+
+/*内容*/
+.main{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: .97rem;
+    background:rgba(243,243,243,1);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*导航*/
+.footer_nav{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: .97rem;
+    background-color: #FFF;
+    box-shadow:0px 0px 24px 0px rgba(171,171,171,0.29);
+}
+.footer_nav div{
+    flex: 1;
+    height: .97rem;
+}
+.footer_nav div a{
+    color:rgba(121,121,121,1);
+}
+.footer_nav div a.active{
+    color:rgba(51,136,255,1);
+}
+.footer_nav .add_icon img{
+    width: .8rem;
+    height: .8rem;
+}
+.footer_nav .img{
+    margin-top: .05rem;
+}
+.footer_nav .img img{
+    width: .43rem;
+    height: .43rem;
+}
+.footer_nav .text{
+    font-size: .2rem;
+    margin-top: .1rem;
+    font-weight:400;
+}
+
