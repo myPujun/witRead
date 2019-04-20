@@ -5,6 +5,9 @@
 .flex_j_a{
     justify-content: space-around;
 }
+.flex_j_b{
+	justify-content:space-between;
+}
 .flex_j_c{
     justify-content: center;
 }
@@ -15,6 +18,45 @@
     display: flex;
     flex-direction: column
 }
+/*盒子公共样式*/
+.w_100{
+	width:100%;
+}
+.h_100{
+	height:100%;
+}
+.box_b_b{
+	box-sizing:border-box;
+}
+.container{
+	padding:0 .3rem;
+	box-sizing:border-box;
+	background:#fff;
+	font-family:'方正兰亭黑';
+}
+/*标签公共样式*/
+a{
+	color:#000;
+}
+/*定位样式*/
+.pos_r{
+	position:relative;
+}
+.pos_a{
+	position:absolute;
+}
+/*背景图片*/
+.img_s_cover{
+	background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+.img_s_contain{
+	background-size:contain;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
 
 /*内容*/
 .main{
@@ -22,7 +64,7 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: .97rem;
+    bottom: .98rem;
     background:rgba(243,243,243,1);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -34,13 +76,13 @@
     left: 0;
     right: 0;
     bottom: 0;
-    height: .97rem;
+    height: .98rem;
     background-color: #FFF;
     box-shadow:0px 0px 24px 0px rgba(171,171,171,0.29);
 }
 .footer_nav div{
     flex: 1;
-    height: .97rem;
+    height: .98rem;
 }
 .footer_nav div a{
     color:rgba(121,121,121,1);
@@ -65,3 +107,127 @@
     font-weight:400;
 }
 
+
+
+/*dynamic_writting.html引用的样式*/
+.title_btn{
+	margin:.28rem 0;
+	width:33.3%;
+}
+.text_right{
+	text-align:right;
+}
+.title_btn_text{
+	font-size:.32rem;
+}
+.text_area{
+	height:9.78rem;
+	padding:.38rem .28rem .70rem .28rem;
+	background-color:rgba(245,245,245,1);
+	border-radius:.1rem;
+}
+.text_area textarea{
+	background-color:rgba(245,245,245,1);
+	font-size:.28rem;
+	border:none;
+	outline:none;
+}
+.text_area p{
+	bottom:.24rem;
+	right:.28rem;
+	font-size:.28rem;
+	color:rgba(177,177,177,1);
+}
+.writting_icon_box{
+	height:.5rem;
+	margin-top:.3rem;
+}
+.writting_icon{
+	height:.5rem;
+	width:.6rem;
+	display:inline-block;
+	overflow:hidden;
+}
+.writting_icon_bg_img1{
+	background-image:url(../images/dynamic_writting/img_upload.png)
+}
+.writting_icon_bg_img2{
+	background-image:url(../images/dynamic_writting/camera.png)
+}
+.writting_icon input{
+	opacity:0;
+}
+.writting_icon_m_l{
+	margin-left:.38rem;
+}
+
+/*dynamic_writting.html引用的样式*/
+.img_list{
+	margin:.2rem 0 .1rem 0;
+	height:.98rem;
+	/* overflow-x:auto; */
+}
+.img_list_item:not(:first-child){
+	margin-left:.28rem;
+}
+.img_list_item{
+	display:inline-block;
+	width:.98rem;
+	height:.98rem;
+	border-radius:.04rem;
+	background:#666;
+}
+.del_icon{
+	width:.24rem;
+	height:.24rem;
+	border-radius:50%;
+	border:.01rem solid #fff;
+	top:-.05rem;
+	right:-.1rem;
+	background:#666
+}
+
+/*reaction_to_article.html引用的样式*/
+.add_book{
+	margin-top:.26rem;
+}
+.add_book_text{
+	font-size:.28rem;
+	color:rgba(177,177,177,1);
+}
+.add_book_checkbox{
+	width:0;
+	height:0;
+	display:none;
+}
+
+#add_book_input +label{
+	top:.03rem;
+    display: inline-block;
+	margin-left:.26rem;
+    width:.3rem;
+	height:.3rem;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 1);
+	border:.01rem solid rgba(177,177,177,1);
+}
+#add_book_input:checked +label::before{
+    display: block;
+    content: "\2713";
+    text-align: center;
+	color:rgba(177,177,177,1);
+}
+
+/*book_review.html引用的样式*/
+.star{
+	display:inline-block;
+	width:.26rem;
+	height:.26rem;
+	background-image:url(../images/book_review/star_no_color.png)
+}
+.star:not(:first-child){
+	margin-left:.08rem;
+}
+.color_star{
+	background-image:url(../images/book_review/star_color.png)
+}
