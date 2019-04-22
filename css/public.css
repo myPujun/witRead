@@ -34,9 +34,43 @@
 	background:#fff;
 	font-family:'方正兰亭黑';
 }
+.margin_top20{
+    margin-top: .2rem;
+}
+.padding_30{
+    padding: .3rem;
+}
+.bg_white{
+    background-color: #FFF;
+}
 /*标签公共样式*/
 a{
 	color:#000;
+}
+/*公共title*/
+.public_title .title{
+    color:rgba(0,0,0,1);
+    font-size:.36rem;
+    line-height: .4rem;
+    padding-bottom: .4rem;
+}
+.public_title .icon_right{
+    width: .4rem;
+    height: .4rem;
+}
+.public_title .title_left{
+    position: relative;
+    padding-left: .22rem;
+}
+.public_title .title_left::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: .4rem;
+    width: .03rem;
+    background:rgba(0,0,0,1);
+    border-radius:2px;
 }
 /*定位样式*/
 .pos_r{
@@ -73,7 +107,22 @@ a{
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
-
+/*首页tab切换*/
+.index_tab{
+    background-color: #FFF;
+    padding: .2rem 0;
+}
+.index_tab a{
+    font-size: .36rem;
+    color: #000;
+    font-weight:bold;
+    padding-bottom: .16rem;
+}
+.index_tab a.active{
+    color: #3388FF;
+    border-bottom:2px solid #3388FF;
+    border-radius:2px; 
+}
 /*导航*/
 .footer_nav{
     position: absolute;
@@ -110,8 +159,6 @@ a{
     margin-top: .1rem;
     font-weight:400;
 }
-
-
 
 /*dynamic_writting.html引用的样式*/
 .title_btn{
@@ -153,10 +200,10 @@ a{
 	overflow:hidden;
 }
 .writting_icon_bg_img1{
-	background-image:url(../images/dynamic_writting/img_upload.png)
+	background-image:url(../images/icon/img_upload.png)
 }
 .writting_icon_bg_img2{
-	background-image:url(../images/dynamic_writting/camera.png)
+	background-image:url(../images/icon/camera.png)
 }
 .writting_icon input{
 	opacity:0;
@@ -221,28 +268,23 @@ a{
     text-align: center;
 	color:rgba(177,177,177,1);
 }
-
 /*book_review.html引用的样式*/
 .star{
 	display:inline-block;
 	width:.26rem;
 	height:.26rem;
-	background-image:url(../images/book_review/star_no_color.png)
+	background-image:url(../images/icon/star_no_color.png)
 }
 .star:not(:first-child){
 	margin-left:.08rem;
 }
 .color_star{
-	background-image:url(../images/book_review/star_color.png)
+	background-image:url(../images/icon/star_color.png)
 }
-
 /*book_content.html引用的样式*/
 .header_bg{
 	height:2.3rem;
 	background:rgba(50,77,84,1);
-}
-body{
-	font-family:'方正兰亭黑';
 }
 .book_content_bg{
 	background:rgba(243,243,243,1);
@@ -327,7 +369,7 @@ body{
 .collection_icon{
 	width:.3rem;
 	height:.24rem;
-	background-image:url(../images/book_content/like.png);
+	background-image:url(../images/icon/like.png);
 }
 .collection_text{
 	color:rgba(255,255,255,1);
@@ -476,6 +518,36 @@ body{
 	
 }
 
-/*book_want_write.html引用的样式*/
-
-/**/
+/*每日推荐*/
+.recommend .recommend_img{
+    min-width: 1.52rem;
+    width:1.52rem;
+    height:2.21rem;
+    margin-right: .24rem;
+}
+.recommend .recommend_img img{
+    width: 100%;
+    height: 100%;
+}
+.recommend .message .name{
+    font-size: .28rem;
+    color:rgba(0,0,0,1);
+    font-weight:400;    
+    line-height: 100%;
+}
+.recommend .message .details{
+    font-size: .28rem;
+    color: #6D6D6D;
+    line-height: .4rem;
+    font-weight:400;
+    margin: .26rem 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+.recommend .message .star_list span{
+    color: #6D6D6D;
+    font-size: .28rem;
+    font-weight:400;
+}

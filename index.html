@@ -8,11 +8,96 @@
     <link rel="stylesheet" href="css/clear.css">
     <link rel="stylesheet" href="css/public.css">
     <script src="js/fontSezi.js"></script>
-
+    <style>
+        #keyword::-webkit-input-placeholder {
+            color: transparent;
+            text-indent: -9999px;
+            background: transparent url(images/icon/search.png) no-repeat 10% center;
+        }
+        #keyword::-moz-placeholder {
+            /* Firefox 19+ */
+            color: transparent;
+            text-indent: -9999px;
+            background: #fff url(images/icon/search.png) no-repeat 10% center;
+        }
+        #keyword:-moz-placeholder {
+            /* Firefox 18- */
+            color: transparent;
+            text-indent: -9999px;
+            background: transparent url(images/icon/search.png) no-repeat 10% center;
+        }
+        #keyword:-ms-input-placeholder {
+            /* IE 10- */
+            color: transparent;
+            text-indent: -9999px;
+            background: transparent url(images/icon/search.png) no-repeat 10% center;
+        }
+        .search{
+            padding: .2rem .3rem;
+            background-color: #FFF;
+        }
+        .search input{
+            background: none;
+            border: none;
+            outline: none;
+            width: 6.9rem;
+            height: .56rem;
+            background:rgba(243,243,243,1);
+            border:1px solid rgba(230, 230, 234, 1);
+            border-radius:10px;
+            text-indent: .2rem;
+        }
+        .star:not(:first-child){
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <div class="main">
-        
+        <div class="search">
+            <input type="text" placeholder="书名、作者、关键字" id="keyword">
+        </div>
+        <div class="index_tab flex flex_j_a">
+            <a href="#" class="active">推荐</a>
+            <a href="#">分类</a>
+            <a href="#">必读</a>
+        </div>
+        <div class="margin_top20 padding_30 bg_white">
+            <div class="public_title flex flex_j_b">
+                <h2 class="title">每日推荐</h2>
+                <img class="icon_right" src="images/icon/right.png" alt="">
+            </div>
+            <div class="recommend flex">
+                <div class="recommend_img">
+                    <img src="images/book_cover.png" alt="">
+                </div>
+                <div class="message flex_c flex_j_b">
+                    <h3 class="name">格林童话</h3>
+                    <div class="details">
+                        《格林童话》是由德国语言学家雅可布·格林和威廉·格林兄弟收集、整理、加工完成的德国民间文学。《格林童话》里面约有200多个故事，大部分源自民间的口头传说，其中的《灰姑娘》、《白雪公主》
+                    </div>
+                    <div class="star_list flex">
+                        <span>推荐指数：</span>
+                        <div class='star_class inline_block'>
+                            <div class="star color_star img_s_cover"></div>
+                            <div class="star color_star img_s_cover"></div>
+                            <div class="star color_star img_s_cover"></div>
+                            <div class="star color_star img_s_cover"></div>
+                            <div class="star img_s_cover"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="margin_top20 padding_30 bg_white">
+            <div class="public_title flex flex_j_b">
+                <h2 class="title">人气最高</h2>
+                <img class="icon_right" src="images/icon/right.png" alt="">
+            </div>
+            <ul class="">
+                <li></li>
+            </ul>
+        </div>
     </div>
     <!-- 导航 -->
     <footer class="footer_nav">
