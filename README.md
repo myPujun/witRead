@@ -3,3 +3,7 @@
 # dynamic_writting_upload.html --- 写动态(含上传图片)
 # reaction_to_article.html --- 读后感...
 # book_review.html --- 书评
+# book_content.html --- 书内容页
+# book_comment_empty.html --- 书内容评论页(空)
+# book_comment.html --- 书内容评论页
+# book_want_write --- 书我想写...页
