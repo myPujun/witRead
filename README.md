@@ -7,3 +7,5 @@
 # book_comment_empty.html --- 书内容评论页(空)
 # book_comment.html --- 书内容评论页
 # book_want_write --- 书我想写...页
+# read_page.html --- 朗读页
+# read_finish.html --- 朗读完成页
