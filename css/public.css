@@ -472,8 +472,31 @@ body{
 
 
 /*book_comment.html引用的样式*/
+.comment_content_list{
+	text-align:left;
+}
 .comment_content_item{
-	
+	padding:.46rem 0 .72rem 0;
+}
+.content_item_top{
+	width:100%;
+	height:.8rem;
+}
+.content_item_top>div{
+	display:inline-block;
+	height:100%;
+}
+.avatar{
+	width:.8rem;
+	border-radius:50%;
+	background:#666;
+}
+.comment_message{
+	margin-left:.28rem;
+}
+.comment_time{
+	font-size:.26rem;
+	color:#A1A1A1;
 }
 
 /*book_want_write.html引用的样式*/
