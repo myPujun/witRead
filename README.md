@@ -9,3 +9,4 @@
 # book_want_write --- 书我想写...页
 # read_page.html --- 朗读页
 # read_finish.html --- 朗读完成页
+# we_chat_bind.html --- 微信绑定手机页
