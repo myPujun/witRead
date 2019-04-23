@@ -10,15 +10,13 @@
     <script src="js/fontSezi.js"></script>
 
 </head>
-<body>
+<body class='bg_gray'>
 	<div class='pos_r'>
 		<div class='header_bg w_100 pos_r'>
 		</div>
 		<div class='white_space w_100'></div>
 		
 		<div class='book_cover w_100 box_b_b pos_a'>
-
-
 			<div class='book_cover_left h_100'>
 				<img src="./images/book_cover.png" alt="" />
 			</div>
@@ -73,25 +71,81 @@
 			</div>
 		</div>
 
-
+		<!-- 评论内容代码 -->
 		<div class='w_100 empty_content box_b_b comment_content_list'>
 			<div class='comment_content_item'>
 
 				<div class='content_item_top flex'>
-					<div class='avatar'></div>
-					<div class='comment_message flex_c flex_j_b'>
+					<div class='avatar img_s_cover'></div>
+					<div class='comment_message flex_c flex_j_b box_b_b'>
 						<div class='comment_name'>王一然</div>
-						<div class='comment_time'>2019-4-16</div>
+						<div class='comment_time'>2019-4-16 <span>12:44</span></div>
 					</div>
 				</div>
 
-				<p class='comment_content_text'></p>
+				<p class='comment_content_text'>
+					鲁迅的《朝花夕拾》是一本需要慢慢品味才能知作者心的书，我读了很多遍，直到今天合上书本，才终于对其中几篇有所领悟。
+				</p>
 
-				<div class='content_item_bottom'>
-					<div class='read_count'></div>
-					<div class='operation_icon'>
-						<div class='comment_icon'></div>
-						<div class='fabulous_icon'></div>
+				<div class='content_item_bottom flex flex_j_b'>
+					<p class='read_count'>
+						浏览32次
+					</p>
+					<div class='operation_icon flex flex_j_b'>
+						<div class='book_comment_icon flex flex_j_b'>
+							<div class='comment_icon'>
+								<img src="./images/icon/comment.png" alt="" />
+							</div>
+							<div><p>9</p></div>
+						</div>
+						<div class='book_comment_icon flex flex_j_b'>
+							<div class='fabulous_icon'>
+								<img src="./images/icon/fabulous.png" alt="" />
+							</div>
+							<div><p>8</p></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- 分割div，除第一个评论内容代码外，每个评论内容代码前需加一个分割div -->
+		<div class='division'></div>
+		
+		<!-- 评论内容代码（拷贝） -->
+		<div class='w_100 empty_content box_b_b comment_content_list'>
+			<div class='comment_content_item'>
+
+				<div class='content_item_top flex'>
+					<div class='avatar img_s_cover'></div>
+					<div class='comment_message flex_c flex_j_b box_b_b'>
+						<div class='comment_name'>王一然</div>
+						<div class='comment_time'>2019-4-16 <span>12:44</span></div>
+					</div>
+				</div>
+
+				<p class='comment_content_text'>
+					鲁迅的《朝花夕拾》是一本需要慢慢品味才能知作者心的书，我读了很多遍，直到今天合上书本，才终于对其中几篇有所领悟。
+				</p>
+
+				<div class='content_item_bottom flex flex_j_b'>
+					<p class='read_count'>
+						浏览32次
+					</p>
+					<div class='operation_icon flex flex_j_b'>
+						<div class='book_comment_icon flex flex_j_b'>
+							<div class='comment_icon'>
+								<img src="./images/icon/comment.png" alt="" />
+							</div>
+							<div><p>9</p></div>
+						</div>
+						<div class='book_comment_icon flex flex_j_b'>
+							<div class='fabulous_icon'>
+								<img src="./images/icon/fabulous.png" alt="" />
+							</div>
+							<div><p>8</p></div>
+						</div>
 					</div>
 				</div>
 
