@@ -25,6 +25,10 @@
 .h_100{
 	height:100%;
 }
+.wh_100{
+	width:100%;
+	height:100%;
+}
 .box_b_b{
 	box-sizing:border-box;
 }
@@ -258,7 +262,7 @@ body{
 	display:none;
 }
 
-#add_book_input +label{
+.add_book_checkbox +label{
 	top:.03rem;
     display: inline-block;
 	margin-left:.26rem;
@@ -268,7 +272,7 @@ body{
     background: rgba(255, 255, 255, 1);
 	border:.01rem solid rgba(177,177,177,1);
 }
-#add_book_input:checked +label::before{
+.add_book_checkbox:checked +label::before{
     display: block;
     content: "\2713";
     text-align: center;
@@ -621,6 +625,78 @@ body{
 .arrow > img{
 	width:100%;
 	height:100%;
+}
+
+/*read_page.html引用样式*/
+.read_page{
+	width:100%;
+}
+.circle_outside{
+	width:3.4rem;
+	height:3.4rem;
+	margin:.82rem auto 0 auto;
+	background:#E8F1FF;
+	border-radius:50%;
+	padding-top:.42rem;
+}
+.circle_middle{
+	width:2.56rem;
+	height:2.56rem;
+	margin:0 auto;
+	background:#BAD6FF;
+	border-radius:50%;
+	padding-top:.28rem;
+}
+.circle_inside{
+	width:2rem;
+	height:2rem;
+	margin:0 auto;
+	background:#6FABFF;
+	border-radius:50%;
+}
+.circle_inside > img{
+	width:100%;
+	height:100%;
+}
+.read_page_time{
+	text-align:center;
+	width:100%;
+	margin-top:.48rem;
+}
+.circle_time{
+	font-size:.32rem;
+	color:#3E3E3E;
+}
+.read_btn{
+	width:2.94rem;
+	height:.88rem;
+	margin:1.18rem auto;
+}
+.read_btn > div{
+	width:.88rem;
+	height:.88rem;
+	border-radius:50%;
+}
+
+/*read_finish.html引用代码*/
+.public_btn{
+	width:6.9rem;
+	height:.88rem;
+	margin:.44rem auto;
+	
+}
+.public_btn > button{
+	width:100%;
+	height:100%;
+	background:#3388FF;
+	border:none;
+	outline:none;
+	border-radius:.44rem;
+	color:#FFF;
+	font-size:.4rem;
+}
+.add_book_box{
+	margin-left:.5rem;
 }
 
 
