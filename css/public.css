@@ -18,6 +18,9 @@
     display: flex;
     flex-direction: column
 }
+.flex_wrap{
+	flex-wrap: wrap;
+}
 /*盒子公共样式*/
 .w_100{
 	width:100%;
@@ -50,6 +53,9 @@
 .bg_gray{
 	background:rgba(243,243,243,1);
 }
+.border_top{
+	border: 1px solid #F3F3F3;
+}
 /*标签公共样式*/
 a{
 	color:#000;
@@ -62,7 +68,9 @@ body{
     color:rgba(0,0,0,1);
     font-size:.36rem;
     line-height: .4rem;
-    padding-bottom: .4rem;
+}
+.public_title .title.pa_bottom{
+	padding-bottom: .4rem;
 }
 .public_title .icon_right{
     width: .4rem;
@@ -78,9 +86,56 @@ body{
     left: 0;
     top: 0;
     height: .4rem;
-    width: .03rem;
+    width: 2px;
     background:rgba(0,0,0,1);
     border-radius:2px;
+}
+/*公共书籍列表*/
+.books li{
+	margin-top: .4rem;
+}
+.books .book_img{
+	width: 1.9rem;
+	height: 2.6rem;
+	box-shadow:0px 2px .13rem 0px rgba(0, 0, 0, 0.3);
+}
+.books .book_img img{
+	width: 100%;
+	height: 100%;
+}
+.books .name{
+	font-size: .28rem;
+	color: #000;
+	margin-top: .3rem;
+	font-weight: 400;
+	margin-bottom: .15rem;
+}
+.books .author{
+	font-size: .24rem;
+	color:#8C8C8C;
+}
+/*搜索框样式*/
+#searchText::-webkit-input-placeholder{
+	text-indent: -9999px;
+	background-image: url(../images/search_bg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 6.9rem .56rem;
+}
+.search{
+	padding: .2rem .3rem;
+	background-color: #FFF;
+}
+.search input{
+	background: none;
+	border: none;
+	outline: none;
+	width: 6.9rem;
+	height: .56rem;
+	background:rgba(243,243,243,1);
+	border:1px solid rgba(230, 230, 234, 1);
+	border-radius:10px;
+	text-indent: .2rem;
 }
 /*定位样式*/
 .pos_r{
@@ -122,13 +177,12 @@ body{
     background-color: #FFF;
     padding: .2rem 0;
 }
-.index_tab a{
+.index_tab h2{
     font-size: .36rem;
     color: #000;
-    font-weight:bold;
     padding-bottom: .16rem;
 }
-.index_tab a.active{
+.index_tab h2.active{
     color: #3388FF;
     border-bottom:2px solid #3388FF;
     border-radius:2px; 
@@ -765,12 +819,28 @@ body{
 }
 
 
-/*每日推荐*/
+/*每日推荐/必读书籍列表*/
+.recommend.border_padding_bottom{
+	padding: .45rem 0;
+	border-bottom: 1px solid #D2D2D2;
+}
+.recommend:first-child{
+	padding-top: 0;
+}
+.recommend:last-child{
+	border: none;
+	padding-bottom: 0;
+}
 .recommend .recommend_img{
     min-width: 1.52rem;
     width:1.52rem;
     height:2.21rem;
     margin-right: .24rem;
+}
+.recommend .recommend_img.img_190{
+	min-width: 1.9rem;;
+	width: 1.9rem;
+	height: 2.6rem;
 }
 .recommend .recommend_img img{
     width: 100%;
@@ -782,19 +852,33 @@ body{
     font-weight:400;    
     line-height: 100%;
 }
+.recommend .message .name.name_32{
+	font-size: .32rem;
+}
 .recommend .message .details{
     font-size: .28rem;
     color: #6D6D6D;
     line-height: .4rem;
     font-weight:400;
-    margin: .26rem 0;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
 }
+.recommend .message .details.set{
+	color: #7E7E7E;
+	-webkit-line-clamp: 2;
+}
+.recommend .message .writer{
+	color: #7E7E7E;
+}
 .recommend .message .star_list span{
     color: #6D6D6D;
     font-size: .28rem;
     font-weight:400;
+}
+.recommend .message .star_list .grade{
+	color: #E97A49;
+	padding: .05rem .1rem;
+	border: 1px solid #E97A49;
 }

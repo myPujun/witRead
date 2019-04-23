@@ -4,98 +4,302 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <meta name="format-detection" content="telephone=yes" />
-    <title>Document</title>
+    <title>智慧阅读</title>
     <link rel="stylesheet" href="css/clear.css">
     <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <script src="js/fontSezi.js"></script>
     <style>
-        #keyword::-webkit-input-placeholder {
-            color: transparent;
-            text-indent: -9999px;
-            background: transparent url(images/icon/search.png) no-repeat 10% center;
-        }
-        #keyword::-moz-placeholder {
-            /* Firefox 19+ */
-            color: transparent;
-            text-indent: -9999px;
-            background: #fff url(images/icon/search.png) no-repeat 10% center;
-        }
-        #keyword:-moz-placeholder {
-            /* Firefox 18- */
-            color: transparent;
-            text-indent: -9999px;
-            background: transparent url(images/icon/search.png) no-repeat 10% center;
-        }
-        #keyword:-ms-input-placeholder {
-            /* IE 10- */
-            color: transparent;
-            text-indent: -9999px;
-            background: transparent url(images/icon/search.png) no-repeat 10% center;
-        }
-        .search{
-            padding: .2rem .3rem;
-            background-color: #FFF;
-        }
-        .search input{
-            background: none;
-            border: none;
-            outline: none;
-            width: 6.9rem;
-            height: .56rem;
-            background:rgba(243,243,243,1);
-            border:1px solid rgba(230, 230, 234, 1);
-            border-radius:10px;
-            text-indent: .2rem;
-        }
         .star:not(:first-child){
             margin: 0;
+        }
+        .classify_list a{
+            width: 3.2rem;
+            height: 1.6rem;
+            box-shadow:0px .02rem .07rem 0px rgba(0, 0, 0, 0.22);
+            border-radius:.04rem;
+            margin-bottom: .3rem
+        }
+        .classify_list a .class_name{
+            font-size: .32rem;
+            width: 1.6rem;
+            color: rgba(0,0,0,1);
+            margin-top: .4rem;
+            margin-left: .15rem;
+            font-weight: 400;
+            line-height: .4rem;
+        }
+        .classify_list a .img{
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+        .classify_list a .img img{
+            width: 1.4rem;
+        }
+        .set_books_list a{
+            width: 3.2rem;
+            height: 1rem;
+            background:rgba(0,0,0,1);
+            margin-bottom: .3rem;
+        }
+        .set_books_list a img{
+            width: 100%;
+            height: 100%;
+        }
+        .tab_list{
+            display: none;
+        }
+        .show{
+            display: block;
+        }
+        .banner{
+            padding-bottom: .2rem;
+        }
+        .banner_list li{
+            width: 6.4rem;
+            height: 2.8rem;
+        }
+        .banner_list li img{
+            width: 100%;
+            height: 2.33rem;
+            border-radius: 4px;
+        }
+        .banner_list .swiper-slide-active img{
+            height: 2.8rem;
         }
     </style>
 </head>
 <body>
     <div class="main">
         <div class="search">
-            <input type="text" placeholder="书名、作者、关键字" id="keyword">
+            <input type="text" placeholder="书名、作者、关键字" id="searchText">
         </div>
         <div class="index_tab flex flex_j_a">
-            <a href="#" class="active">推荐</a>
-            <a href="#">分类</a>
-            <a href="#">必读</a>
+            <h2 class="active">推荐</h2>
+            <h2>分类</h2>
+            <h2>必读</h2>
         </div>
-        <div class="margin_top20 padding_30 bg_white">
-            <div class="public_title flex flex_j_b">
-                <h2 class="title">每日推荐</h2>
-                <img class="icon_right" src="images/icon/right.png" alt="">
+        <!-- 推荐 -->
+        <div class="tab_list show">
+            <div class="banner bg_white swiper-container">
+                <ul class="banner_list swiper-wrapper" style="transform: translate3d(-2586.5px, 0px, 0px); transition-duration: 0ms;">
+                    <li class="swiper-slide flex flex_a_c"><img src="images/banner1.png" alt=""></li>
+                    <li class="swiper-slide flex flex_a_c"><img src="images/banner2.png" alt=""></li>
+                    <li class="swiper-slide flex flex_a_c"><img src="images/banner1.png" alt=""></li>
+                </ul>
             </div>
-            <div class="recommend flex">
-                <div class="recommend_img">
-                    <img src="images/book_cover.png" alt="">
+            <!-- 每日推荐 -->
+            <div class="margin_top20 padding_30 bg_white">
+                <div class="public_title flex flex_j_b">
+                    <h2 class="title pa_bottom">每日推荐</h2>
+                    <img class="icon_right" src="images/icon/right.png" alt="">
                 </div>
-                <div class="message flex_c flex_j_b">
-                    <h3 class="name">格林童话</h3>
-                    <div class="details">
-                        《格林童话》是由德国语言学家雅可布·格林和威廉·格林兄弟收集、整理、加工完成的德国民间文学。《格林童话》里面约有200多个故事，大部分源自民间的口头传说，其中的《灰姑娘》、《白雪公主》
+                <div class="recommend flex">
+                    <div class="recommend_img">
+                        <img src="images/book_cover.png" alt="">
                     </div>
-                    <div class="star_list flex">
-                        <span>推荐指数：</span>
-                        <div class='star_class inline_block'>
-                            <div class="star color_star img_s_cover"></div>
-                            <div class="star color_star img_s_cover"></div>
-                            <div class="star color_star img_s_cover"></div>
-                            <div class="star color_star img_s_cover"></div>
-                            <div class="star img_s_cover"></div>
+                    <div class="message flex_c flex_j_b">
+                        <h3 class="name">格林童话</h3>
+                        <div class="details">
+                            《格林童话》是由德国语言学家雅可布·格林和威廉·格林兄弟收集、整理、加工完成的德国民间文学。《格林童话》里面约有200多个故事，大部分源自民间的口头传说，其中的《灰姑娘》、《白雪公主》
+                        </div>
+                        <div class="star_list flex">
+                            <span>推荐指数：</span>
+                            <div class='star_class inline_block'>
+                                <div class="star color_star img_s_cover"></div>
+                                <div class="star color_star img_s_cover"></div>
+                                <div class="star color_star img_s_cover"></div>
+                                <div class="star color_star img_s_cover"></div>
+                                <div class="star img_s_cover"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="margin_top20 padding_30 bg_white">
-            <div class="public_title flex flex_j_b">
-                <h2 class="title">人气最高</h2>
-                <img class="icon_right" src="images/icon/right.png" alt="">
+            <!-- 人气最高 -->
+            <div class="margin_top20 padding_30 bg_white">
+                <div class="public_title flex flex_j_b">
+                    <h2 class="title">人气最高</h2>
+                    <img class="icon_right" src="images/icon/right.png" alt="">
+                </div>
+                <ul class="books flex flex_wrap flex_j_b">
+                    <li class="flex_c">
+                        <div class="book_img">
+                            <img src="images/book_cover.png" alt="">
+                        </div>
+                        <h2 class="name">猎人笔记</h2>
+                        <p class="author">皮得堡</p>
+                    </li>
+                    <li class="flex_c">
+                        <div class="book_img">
+                            <img src="images/book_cover.png" alt="">
+                        </div>
+                        <h2 class="name">猎人笔记</h2>
+                        <p class="author">皮得堡</p>
+                    </li>
+                    <li class="flex_c">
+                        <div class="book_img">
+                            <img src="images/book_cover.png" alt="">
+                        </div>
+                        <h2 class="name">猎人笔记</h2>
+                        <p class="author">皮得堡</p>
+                    </li>
+                    <li class="flex_c">
+                        <div class="book_img">
+                            <img src="images/book_cover.png" alt="">
+                        </div>
+                        <h2 class="name">猎人笔记</h2>
+                        <p class="author">皮得堡</p>
+                    </li>
+                    <li class="flex_c">
+                        <div class="book_img">
+                            <img src="images/book_cover.png" alt="">
+                        </div>
+                        <h2 class="name">猎人笔记</h2>
+                        <p class="author">皮得堡</p>
+                    </li>
+                    <li class="flex_c">
+                        <div class="book_img">
+                            <img src="images/book_cover.png" alt="">
+                        </div>
+                        <h2 class="name">猎人笔记</h2>
+                        <p class="author">皮得堡</p>
+                    </li>
+                </ul>
             </div>
-            <ul class="">
-                <li></li>
+        </div>
+        <!-- 分类 -->
+        <div class="tab_list">
+            <!-- 全部分类 -->
+            <div class="padding_30 bg_white border_top">
+                <div class="public_title flex flex_j_b">
+                    <h2 class="title title_left pa_bottom">全部分类</h2>
+                </div>
+                <div class="classify_list flex flex_wrap flex_j_b">
+                    <a href="#" class="flex flex_j_b" style="background:rgba(234,234,242,1);">
+                        <h2 class="class_name">科普百科</h2>
+                        <div class="img flex flex_a_c flex_j_c">
+                            <img src="images/classify/classify_1.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="flex flex_j_b" style="background:rgba(222,228,247,1);">
+                        <h2 class="class_name">智力成长</h2>
+                        <div class="img flex flex_a_c flex_j_c">
+                            <img src="images/classify/classify_2.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="flex flex_j_b" style="background:rgba(209,227,246,1);">
+                        <h2 class="class_name">益智游戏</h2>
+                        <div class="img flex flex_a_c flex_j_c">
+                            <img src="images/classify/classify_3.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="flex flex_j_b" style="background:rgba(222,243,247,1);">
+                        <h2 class="class_name">少儿英语</h2>
+                        <div class="img flex flex_a_c flex_j_c">
+                            <img src="images/classify/classify_4.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="flex flex_j_b" style="background:rgba(235,222,247,1);">
+                        <h2 class="class_name">幼儿启蒙</h2>
+                        <div class="img flex flex_a_c flex_j_c">
+                            <img src="images/classify/classify_5.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="flex flex_j_b" style="background:rgba(247,237,222,1);">
+                        <h2 class="class_name">玩具书</h2>
+                        <div class="img flex flex_a_c flex_j_c">
+                            <img src="images/classify/classify_6.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="flex flex_j_b" style="background:rgba(247,222,238,1);">
+                        <h2 class="class_name">动画漫画</h2>
+                        <div class="img flex flex_a_c flex_j_c">
+                            <img src="images/classify/classify_7.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="flex flex_j_b" style="background:rgba(234,234,242,1);">
+                        <h2 class="class_name">绘本图书</h2>
+                        <div class="img flex flex_a_c flex_j_c">
+                            <img src="images/classify/classify_8.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="flex flex_j_b" style="background:rgba(209,227,246,1);">
+                        <h2 class="class_name">中国儿童文学</h2>
+                        <div class="img flex flex_a_c flex_j_c">
+                            <img src="images/classify/classify_9.png" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="flex flex_j_b" style="background:rgba(222,228,247,1);">
+                        <h2 class="class_name">外国儿童文学</h2>
+                        <div class="img flex flex_a_c flex_j_c">
+                            <img src="images/classify/classify_10.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- 必读书籍 -->
+            <div class="margin_top20 padding_30 bg_white">
+                <div class="public_title flex flex_j_b">
+                    <h2 class="title title_left pa_bottom">必读书籍</h2>
+                </div>
+                <div class="set_books_list flex flex_wrap flex_j_b">
+                    <a href="#"><img src="images/classify//grade_1.png" alt=""></a>
+                    <a href="#"><img src="images/classify//grade_2.png" alt=""></a>
+                    <a href="#"><img src="images/classify//grade_3.png" alt=""></a>
+                    <a href="#"><img src="images/classify//grade_4.png" alt=""></a>
+                    <a href="#"><img src="images/classify//grade_5.png" alt=""></a>
+                    <a href="#"><img src="images/classify//grade_6.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <!-- 必读 -->
+        <div class="tab_list">
+            <ul class="padding_30 bg_white border_top">
+                <li class="recommend border_padding_bottom flex">
+                    <div class="recommend_img img_190">
+                        <img src="images/book_cover.png" alt="">
+                    </div>
+                    <div class="message flex_c flex_j_b">
+                        <h3 class="name name_32">格林童话</h3>
+                        <div class="details set">
+                            《格林童话》是由德国语言学家雅可布·格林和威廉·格林兄弟收集、整理、加工完成的德国民间文学。《格林童话》里面约有200多个故事，大部分源自民间的口头传说，其中的《灰姑娘》、《白雪公主》
+                        </div>
+                        <p class="writer">作者：莫泊桑</p>
+                        <div class="star_list flex flex_j_b flex_a_c">
+                            <div class='star_class inline_block'>
+                                <div class="star color_star img_s_cover"></div>
+                                <div class="star color_star img_s_cover"></div>
+                                <div class="star color_star img_s_cover"></div>
+                                <div class="star color_star img_s_cover"></div>
+                                <div class="star img_s_cover"></div>
+                            </div>
+                            <span class="grade">1年级必读书</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="recommend border_padding_bottom flex">
+                    <div class="recommend_img img_190">
+                        <img src="images/book_cover.png" alt="">
+                    </div>
+                    <div class="message flex_c flex_j_b">
+                        <h3 class="name name_32">格林童话</h3>
+                        <div class="details set">
+                            《格林童话》是由德国语言学家雅可布·格林和威廉·格林兄弟收集、整理、加工完成的德国民间文学。《格林童话》里面约有200多个故事，大部分源自民间的口头传说，其中的《灰姑娘》、《白雪公主》
+                        </div>
+                        <p class="writer">作者：莫泊桑</p>
+                        <div class="star_list flex flex_j_b flex_a_c">
+                            <div class='star_class inline_block'>
+                                <div class="star color_star img_s_cover"></div>
+                                <div class="star color_star img_s_cover"></div>
+                                <div class="star color_star img_s_cover"></div>
+                                <div class="star color_star img_s_cover"></div>
+                                <div class="star img_s_cover"></div>
+                            </div>
+                            <span class="grade">1年级必读书</span>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
@@ -132,4 +336,35 @@
         </div>
     </footer>
 </body>
+<script src="js/swiper.min.js"></script>
+<script>
+    var tabs = document.getElementsByClassName('index_tab')[0].getElementsByTagName('h2'),
+        contents = document.querySelectorAll('.tab_list');
+        (function changeTab() {
+            for(var i = 0, len = tabs.length; i < len; i++) {
+                tabs[i].onmouseover = showTab;
+            }
+        })();
+        function showTab() {
+            for(var i = 0, len = tabs.length; i < len; i++) {
+                if(tabs[i] === this) {
+                    tabs[i].className = 'active';
+                    contents[i].className = 'show';
+                } else {
+                    tabs[i].className = '';
+                    contents[i].className = 'tab_list';
+                }
+            }
+        }
+        var swiper = new Swiper('.swiper-container', {
+            autoplay:true,
+            disableOnInteraction:false,
+            slidesPerView: 'auto', //重要 可以去swiper搜索
+            centeredSlides: true,   //重要
+            paginationClickable: true,
+            spaceBetween: 10,
+            effect: 'left',
+            loop: true,
+        });
+</script>
 </html>
