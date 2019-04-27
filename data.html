@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=yes" />
+    <title>智慧阅读</title>
+    <link rel="stylesheet" href="css/clear.css">
+    <link rel="stylesheet" href="css/public.css">
+    <script src="js/fontSezi.js"></script>
+    <style>
+        .main{
+            top: 1.76rem;
+        }
+        .top_content{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9;
+        }
+        .top_tab_list{
+            height: .88rem;
+            border-bottom: 1px solid #D8D8D8;
+        }
+        .top_tab_list li{
+            font-size: .32rem;
+            font-weight: 400;
+            flex: 1;
+            text-align: center;
+        }
+        .top_tab_list li.active,.ranking_tab_list li.active{
+            color: #3388FF;
+        }
+        .top_tab_list li:first-child{
+            border-right: 1px solid #D8D8D8;
+        }
+        .ranking_tab_list{
+            height: .88rem;
+        }
+        .ranking_tab_list li{
+            color: #4A4A4A;
+            font-size: .32rem;
+            line-height: .88rem;
+            font-weight: 400;
+        }
+        .ranking_tab_list li.active{
+            border-bottom: 2px solid #3388FF;
+        }
+        .hint{
+            padding-left: .3rem;
+            height: .44rem;
+            background-color: #ECECEC;
+            font-size: .2rem;
+            color: #4A4A4A;
+        }
+        .ranking_list .first{
+            height: 3rem;
+        }
+        .ranking_list .first .name{
+            font-size: .3rem;
+            color: #000;
+            font-weight: 400;
+            margin-top: .1rem;
+        }
+        .ranking_list .first .head{
+            position: relative;
+            width: 1.12rem;
+            height: 1.12rem;
+            border-radius: 50%;
+            border: 1px solid #D8D8D8;
+            margin-top: .15rem;
+            margin-bottom: .28rem;
+        }
+        .ranking_list .first .head::after{
+            content: '';
+            position: absolute;
+            top: -.3rem;
+            left: -.2rem;
+            width: .72rem;
+            height: .65rem;
+            background-image: url('images/icon/guanjun.png');
+            background-repeat: no-repeat;
+            background-size: .72rem .65rem;
+        }
+        .ranking_list .first .head img{
+            width: 1.12rem;
+            height: 1.12rem;
+            border-radius: 50%;
+        }
+        .ranking_data .sapling{
+            width: .28rem;
+            height: .28rem;
+            background-repeat: no-repeat;
+            background-image: url(images/icon/sapling.png);
+            background-position: center;
+            background-size: .28rem;
+            margin-right: .16rem;
+        }
+        .ranking_data span{
+            font-size: .24rem;
+            color: #3388FF;
+            font-weight: 400;
+        }
+        .ranking_list .list li{
+            height: .88rem;
+            padding-right: .3rem;
+            border-top: 1px solid rgba(216,216,216,.5);
+        }
+        .ranking_list .list .sequence{
+            width: 1.08rem;
+            height: .88rem;
+            line-height: .88rem;
+            text-align: center;
+            color: #000;
+            font-size: .3rem;
+            font-weight: 400;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: .4rem .44rem;
+        }
+        .ranking_list .list .sequence.two{
+            background-image: url(images/icon/second.png);
+        }
+        .ranking_list .list .sequence.three{
+            background-image: url(images/icon/thirdly.png);
+        }
+        .ranking_list .list .head{
+            width: .66rem;
+            height: .66rem;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 1px solid #D8D8D8;
+        }
+        .ranking_list .list .name{
+            color: #000;
+            font-size: .3rem;
+            font-weight: 400;
+            margin-left: .3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="top_content">
+        <ul class="top_tab_list bg_white flex flex_j_a flex_a_c">
+            <li class="active">班级小达人</li>
+            <li>校级小达人</li>
+        </ul>
+        <ul class="ranking_tab_list bg_white flex flex_j_a">
+            <li class="active">本月排名</li>
+            <li>本季度排名</li>
+            <li>本学期排名</li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="hint flex flex_a_c">*根据本月增长的阅读成长值排序</div>
+        <div class="ranking_list bg_white">
+            <div class="first flex_c flex_a_c flex_j_c">
+                <div class="head">
+                    <img src="images/avatar.jpg" alt="">
+                </div>
+                <div class="ranking_data flex">
+                    <i class="sapling"></i>
+                    <span>300</span>
+                </div>
+                <p class="name">王一然</p>
+            </div>
+            <ul class="list">
+                <li class="flex flex_a_c flex_j_b">
+                    <div class="left flex flex_a_c">
+                        <div class="sequence two"></div>
+                        <img class="head" src="images/avatar.jpg" alt="">
+                        <span class="name">王春星</span>
+                    </div>
+                    <div class="ranking_data flex">
+                        <i class="sapling"></i>
+                        <span>300</span>
+                    </div>
+                </li>
+                <li class="flex flex_a_c flex_j_b">
+                    <div class="left flex flex_a_c">
+                        <div class="sequence three"></div>
+                        <img class="head" src="images/avatar.jpg" alt="">
+                        <span class="name">王春星</span>
+                    </div>
+                    <div class="ranking_data flex">
+                        <i class="sapling"></i>
+                        <span>300</span>
+                    </div>
+                </li>
+                <li class="flex flex_a_c flex_j_b">
+                    <div class="left flex flex_a_c">
+                        <div class="sequence">4</div>
+                        <img class="head" src="images/avatar.jpg" alt="">
+                        <span class="name">王春星</span>
+                    </div>
+                    <div class="ranking_data flex">
+                        <i class="sapling"></i>
+                        <span>300</span>
+                    </div>
+                </li>
+                <li class="flex flex_a_c flex_j_b">
+                    <div class="left flex flex_a_c">
+                        <div class="sequence">5</div>
+                        <img class="head" src="images/avatar.jpg" alt="">
+                        <span class="name">王春星</span>
+                    </div>
+                    <div class="ranking_data flex">
+                        <i class="sapling"></i>
+                        <span>300</span>
+                    </div>
+                </li>
+                <li class="flex flex_a_c flex_j_b">
+                    <div class="left flex flex_a_c">
+                        <div class="sequence">5</div>
+                        <img class="head" src="images/avatar.jpg" alt="">
+                        <span class="name">王春星</span>
+                    </div>
+                    <div class="ranking_data flex">
+                        <i class="sapling"></i>
+                        <span>300</span>
+                    </div>
+                </li>
+                <li class="flex flex_a_c flex_j_b">
+                    <div class="left flex flex_a_c">
+                        <div class="sequence">5</div>
+                        <img class="head" src="images/avatar.jpg" alt="">
+                        <span class="name">王春星</span>
+                    </div>
+                    <div class="ranking_data flex">
+                        <i class="sapling"></i>
+                        <span>300</span>
+                    </div>
+                </li>
+                <li class="flex flex_a_c flex_j_b">
+                    <div class="left flex flex_a_c">
+                        <div class="sequence">5</div>
+                        <img class="head" src="images/avatar.jpg" alt="">
+                        <span class="name">王春星</span>
+                    </div>
+                    <div class="ranking_data flex">
+                        <i class="sapling"></i>
+                        <span>300</span>
+                    </div>
+                </li>
+                <li class="flex flex_a_c flex_j_b">
+                    <div class="left flex flex_a_c">
+                        <div class="sequence">5</div>
+                        <img class="head" src="images/avatar.jpg" alt="">
+                        <span class="name">王春星</span>
+                    </div>
+                    <div class="ranking_data flex">
+                        <i class="sapling"></i>
+                        <span>300</span>
+                    </div>
+                </li>
+                <li class="flex flex_a_c flex_j_b">
+                    <div class="left flex flex_a_c">
+                        <div class="sequence">5</div>
+                        <img class="head" src="images/avatar.jpg" alt="">
+                        <span class="name">王春星</span>
+                    </div>
+                    <div class="ranking_data flex">
+                        <i class="sapling"></i>
+                        <span>300</span>
+                    </div>
+                </li>
+                <li class="flex flex_a_c flex_j_b">
+                    <div class="left flex flex_a_c">
+                        <div class="sequence">5</div>
+                        <img class="head" src="images/avatar.jpg" alt="">
+                        <span class="name">王春星</span>
+                    </div>
+                    <div class="ranking_data flex">
+                        <i class="sapling"></i>
+                        <span>300</span>
+                    </div>
+                </li>
+                <li class="flex flex_a_c flex_j_b">
+                    <div class="left flex flex_a_c">
+                        <div class="sequence">5</div>
+                        <img class="head" src="images/avatar.jpg" alt="">
+                        <span class="name">王春星</span>
+                    </div>
+                    <div class="ranking_data flex">
+                        <i class="sapling"></i>
+                        <span>300</span>
+                    </div>
+                </li>
+                <li class="flex flex_a_c flex_j_b">
+                    <div class="left flex flex_a_c">
+                        <div class="sequence">5</div>
+                        <img class="head" src="images/avatar.jpg" alt="">
+                        <span class="name">王春星</span>
+                    </div>
+                    <div class="ranking_data flex">
+                        <i class="sapling"></i>
+                        <span>300</span>
+                    </div>
+                </li>
+                <li class="flex flex_a_c flex_j_b">
+                    <div class="left flex flex_a_c">
+                        <div class="sequence">5</div>
+                        <img class="head" src="images/avatar.jpg" alt="">
+                        <span class="name">王春星</span>
+                    </div>
+                    <div class="ranking_data flex">
+                        <i class="sapling"></i>
+                        <span>300</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 导航 -->
+    <footer class="footer_nav">
+        <div class="nav_list flex flex_j_a flex_a_c">
+            <a href="index.html" class="active flex_c flex_j_c flex_a_c">
+                <section class="img flex flex_j_c">
+                    <img src="images/footer/book.png" alt="">
+                </section>
+                <p class="text">书库</p>
+            </a>
+            <a href="study.html" class="flex_c flex_j_c flex_a_c">
+                <section class="img flex flex_j_c">
+                    <img src="images/footer/study.png" alt="">
+                </section>
+                <p class="text">读书角</p>
+            </a>
+            <section class="add_icon">
+                <img src="images/footer/add_icon.png" alt="">
+            </section>
+            <a href="data.html" class="active flex_c flex_j_c flex_a_c">
+                <section class="img flex flex_j_c">
+                    <img src="images/footer/inform_active.png" alt="">
+                </section>
+                <p class="text">数据</p>
+            </a>
+            <a href="my.html" class="flex_c flex_j_c flex_a_c">
+                <section class="img flex flex_j_c">
+                    <img src="images/footer/my.png" alt="">
+                </section>
+                <p class="text">我的</p>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

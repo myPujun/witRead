@@ -47,6 +47,9 @@
 .padding_30{
     padding: .3rem;
 }
+.pa_bottom_40{
+	padding-bottom: .4rem;
+}
 .bg_white{
     background-color: #FFF;
 }
@@ -68,6 +71,11 @@ body{
     color:rgba(0,0,0,1);
     font-size:.36rem;
     line-height: .4rem;
+}
+.public_title .title.fine{
+    color:#010101;
+    font-size:.28rem;
+	font-weight:normal;
 }
 .public_title .title.pa_bottom{
 	padding-bottom: .4rem;
@@ -94,14 +102,27 @@ body{
 .books li{
 	margin-top: .4rem;
 }
+.books_ma_63 li{
+	margin-right: .60rem;
+}
+.books_ma_63 li:last-child{
+	margin-right: 0;
+}
 .books .book_img{
 	width: 1.9rem;
 	height: 2.6rem;
-	box-shadow:0px 2px .13rem 0px rgba(0, 0, 0, 0.3);
+	/* box-shadow:0px 2px .13rem 0px rgba(0, 0, 0, 0.3); */
+	box-shadow:0px 4px 6px 0px rgba(171,171,171,0.33);
 }
 .books .book_img img{
 	width: 100%;
 	height: 100%;
+}
+.books .add_icon{
+	background-image: url('../images/add.png');
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: .68rem;
 }
 .books .name{
 	font-size: .28rem;
@@ -604,6 +625,7 @@ body{
 .comment_time{
 	font-size:.26rem;
 	color:#A1A1A1;
+	margin-right: .4rem;
 }
 .comment_time>span{
 	margin-left:.1rem;
@@ -881,4 +903,106 @@ body{
 	color: #E97A49;
 	padding: .05rem .1rem;
 	border: 1px solid #E97A49;
+}
+/*动态列表*/
+.dynamic_content_list li{
+	padding: .46rem .3rem 0 .3rem;
+	margin-top:.2rem;
+}
+.dynamic_content_list li:first-child{
+	margin-top: 0;
+}
+.dynamic_content_list .head{
+	width: .8rem;
+	height: .8rem;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-right: .3rem;
+}
+.dynamic_content_list .head img{
+	width: 100%;
+	height: 100%;
+}
+.dynamic_content_list .message .name{
+	font-size: .23rem;
+	color: #000;
+	font-weight: 400;
+	margin-top: .1rem;
+}
+.dynamic_content_list .message time{
+	font-size: .26rem;
+	color:#A1A1A1;
+	margin-right: .4rem;
+}
+.dynamic_content_list .dynamic_icon_list{
+	height: .8rem;
+}
+.dynamic_content_list section{
+	height: .44rem;
+	color: #595959;
+	font-size: .32rem;
+	line-height: .44rem;
+	background-repeat: no-repeat;
+	background-size: .44rem;
+	padding-left: .6rem;
+	margin-left: .3rem;
+}
+.dynamic_content_list .comment_icon{
+	background-image: url('../images/icon/comment.png');
+}
+.dynamic_content_list .give_icon{
+	background-image: url('../images/icon/fabulous.png');
+}
+.dynamic_content_list .dynamic_comment span{
+	font-size: .28rem;
+	color: #A1A1A1;
+}
+.dynamic_content_list .dynamic_text{
+	padding: .3rem 0;
+}
+.dynamic_content_list .dynamic_recommend{
+	background-color: #EEEEEE;
+	box-shadow:0px .02rem .09rem 0px rgba(0, 0, 0, 0.15);
+	margin-bottom: .3rem;
+}
+.dynamic_content_list .dynamic_recommend .recommend_img{
+	min-width: 1.08rem;
+	width: 1.08rem;
+	height: 1.48rem;
+	margin-right: .25rem;
+}
+.dynamic_content_list .dynamic_recommend .recommend_img img{
+	width: 100%;
+	height: 100%;
+}
+.dynamic_content_list .dynamic_recommend .message .name{
+	font-size: .32rem;
+	color: #000;
+	font-weight: 400;
+	margin-bottom: .12rem;
+}
+.dynamic_content_list .dynamic_recommend .message .details{
+	font-size: .28rem;
+	color: #7E7E7E;
+	line-height: .4rem;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+.dynamic_content_list .praise_list{
+	height: .8rem;
+	border-top: 1px solid #F3F3F3;
+}
+.dynamic_content_list .praise_list .praise_icon{
+	width: .35rem;
+	height: .35rem;
+	background-image: url(../images/icon/praise.png);
+	background-size: .35rem;
+	background-repeat: no-repeat;
+	margin-right: .2rem;
+}
+.dynamic_content_list .praise_list .list span{
+	font-size: .28rem;
+	color: #595959;
 }
