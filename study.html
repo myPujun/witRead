@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=yes" />
+    <title>智慧阅读</title>
+    <link rel="stylesheet" href="css/clear.css">
+    <link rel="stylesheet" href="css/public.css">
+    <script src="js/fontSezi.js"></script>
+    <style>
+        .star:not(:first-child){
+            margin: 0;
+        }
+        .top_nav_x_list{
+            height: 1.04rem;
+        }
+        .top_nav_x_list .list{
+            width:100%;
+            display: inline;
+            white-space: nowrap;/*规定段落中的文本不进行换行*/
+            overflow-x:scroll;/*水平方向，超出部分添加滚动机制*/
+            float:left;/*一定要设置左侧浮动*/
+            overflow-y:hidden/*竖直方向，超出部分隐藏*/
+        }
+        .top_nav_x_list .list li{
+            display:inline-block;/*既可以水平排列，又可以设置宽高和边距*/
+            color: #000;
+            font-size: .32rem;
+            font-weight: 400;
+            margin-right: .5rem;
+            padding-top: .4rem;
+            padding-bottom: .22rem;
+        }
+        .top_nav_x_list .list li:first-child{
+            margin-left: .3rem;
+        }
+        .top_nav_x_list .list li.active{
+            color: #3388FF;
+            border-bottom: 2px solid #3388FF;
+        }
+        .dynamic{
+            position: absolute;
+            bottom: 1.33rem;
+            right: .45rem;
+            width: 1rem;
+            height: 1rem;
+            background-image: url(images/icon/dynamic.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!-- 头部导航 -->
+        <div class="top_nav_x_list bg_white">
+            <ul class="list">
+                <li class="active">全部</li>
+                <li>书评</li>
+                <li>摘抄</li>
+                <li>读后感</li>
+                <li>书评</li>
+                <li>书评</li>
+                <li>摘抄</li>
+                <li>读后感</li>
+                <li>书评</li>
+                <li>书评</li>
+                <li>摘抄</li>
+                <li>读后感</li>
+                <li>书评</li>
+            </ul>
+        </div>
+        <!-- 列表 -->
+        <ul class='dynamic_content_list'>
+            <li class="bg_white">
+                <div class="personage_message flex">
+                    <div class="head"><img src="images/avatar.jpg" alt=""></div>
+                    <div class="message flex_c flex_j_b">
+                        <h2 class="name">王一然</h2>
+                        <div class="bottom flex">
+                            <time>2019-4-16 12:44</time>
+                            <div class='star_class inline_block'>
+                                <div class="star color_star img_s_cover"></div>
+                                <div class="star color_star img_s_cover"></div>
+                                <div class="star color_star img_s_cover"></div>
+                                <div class="star color_star img_s_cover"></div>
+                                <div class="star img_s_cover"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="dynamic_text">
+                    这是我第一次朗读
+                </p>
+                <div class="dynamic_recommend flex">
+                    <div class="recommend_img">
+                        <img src="images/book_cover.png" alt="">
+                    </div>
+                    <div class="message flex_c flex_j_b flex_j_c">
+                        <h3 class="name">格林童话</h3>
+                        <div class="details">
+                            《格林童话》是由德国语言学家雅可布·格林和威廉·格林兄弟收集、整理、加工完成的德国民间文学。《格林童话》里面约有200多个故事，大部分源自民间的口头传说，其中的《灰姑娘》、《白雪公主》
+                        </div>
+                    </div>
+                </div>
+                <div class="dynamic_comment flex flex_j_b flex_a_c">
+                    <span>浏览32次</span>
+                    <div class="dynamic_icon_list flex flex_a_c">
+                        <section class="comment_icon flex">9</section>
+                        <section class="give_icon flex">9</section>
+                    </div>
+                </div>
+                <div class="praise_list flex flex_a_c">
+                    <div class="praise_icon"></div>
+                    <div class="list">
+                        <span>李浩辰,</span>
+                        <span>李浩辰,</span>
+                        <span>李浩辰,</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="dynamic"></div>
+    <!-- 导航 -->
+    <footer class="footer_nav">
+        <div class="nav_list flex flex_j_a flex_a_c">
+            <a href="index.html" class="flex_c flex_j_c flex_a_c">
+                <section class="img flex flex_j_c">
+                    <img src="images/footer/book.png" alt="">
+                </section>
+                <p class="text">书库</p>
+            </a>
+            <a href="study.html" class="active flex_c flex_j_c flex_a_c">
+                <section class="img flex flex_j_c">
+                    <img src="images/footer/study_active.png" alt="">
+                </section>
+                <p class="text">读书角</p>
+            </a>
+            <section class="add_icon">
+                <img src="images/footer/add_icon.png" alt="">
+            </section>
+            <a href="data.html" class="flex_c flex_j_c flex_a_c">
+                <section class="img flex flex_j_c">
+                    <img src="images/footer/inform.png" alt="">
+                </section>
+                <p class="text">数据</p>
+            </a>
+            <a href="my.html" class="flex_c flex_j_c flex_a_c">
+                <section class="img flex flex_j_c">
+                    <img src="images/footer/my.png" alt="">
+                </section>
+                <p class="text">我的</p>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
