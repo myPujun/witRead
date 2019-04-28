@@ -63,6 +63,66 @@ a{
 body{
 	font-family:'方正兰亭黑';
 }
+/*按钮样式*/
+.my_btn_blue{
+	width:100%;
+	height:100%;
+	border:none;
+	outline:none;
+	background:#3388FF;
+	color:#FFF;
+}
+/*播放器*/
+.player{
+	height:1rem;
+	background:#EEEEEE;
+	margin-top:.32rem;
+}
+.play{
+	width:1.1rem;
+	height:1rem;
+	background:#DADADA;
+}
+.play_btn{
+	width:.34rem;
+	height:.4rem;
+	margin:.3rem .385rem;
+	background:#595959;
+}
+.progress_box{
+	width:5.16rem;
+	padding:0 .42rem 0 0rem;
+	margin-left:.22rem
+}
+.progress{
+	height:.02rem;
+	top:.49rem;
+}
+.progress_sum{
+	background:#595959;
+}
+.progress_current,.progress_btn{
+	background:#3388FF;
+}
+.progress_btn{
+	width:.2rem;
+	height:.2rem;
+	border-radius:50%;
+	top:.4rem;
+	left:-1%;
+	box-shadow:0px 2px 9px 0px rgba(4,38,85,0.22);
+}
+.initTime,.sumTime{
+	top:.68rem;
+	color:#C5C5C5;
+	font-size:.26rem;
+}
+.initTime{
+	left:0;
+}
+.sumTime{
+	right:0;
+}
 /*公共title*/
 .public_title .title{
     color:rgba(0,0,0,1);
@@ -188,7 +248,7 @@ body{
     border-radius:2px; 
 }
 /*导航*/
-.footer_nav{
+.footer_nav,.footer{
     position: absolute;
     left: 0;
     right: 0;
@@ -223,6 +283,26 @@ body{
     margin-top: .1rem;
     font-weight:400;
 }
+/*评论输入框*/
+.comment_public_box{
+	padding:.3rem .24rem;
+}
+.comment_input_box{
+	flex:1;
+	
+}
+.comment_input_box > input{
+	border:none;
+	outline:none;
+	border-left:.01rem solid #989898;
+	padding:0 .12rem;
+	font-size:.28rem;
+}
+.comment_button_box{
+	height:.5rem;
+	width:1rem;
+}
+
 
 /*dynamic_writting.html引用的样式*/
 .title_btn{
@@ -439,16 +519,7 @@ body{
 	color:rgba(255,255,255,1);
 	font-size:.26rem;
 }
-.footer{
-	display:flex;
-	position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: .98rem;
-    background-color: #FFF;
-    box-shadow:0px 0px 24px 0px rgba(171,171,171,0.29);
-}
+
 .book_content_footer_item{
 	background:#3388FF;
 	text-align:center;
@@ -882,3 +953,5 @@ body{
 	padding: .05rem .1rem;
 	border: 1px solid #E97A49;
 }
+
+/*comment.html引用样式*/

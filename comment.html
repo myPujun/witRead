@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=yes" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/clear.css">
+    <link rel="stylesheet" href="css/public.css">
+    <script src="js/fontSezi.js"></script>
+</head>
+
+<body class='bg_gray'>
+    <div class='main'>
+
+        <!-- 评论内容代码 -->
+        <div class='w_100 empty_content box_b_b comment_content_list'>
+            <div class='comment_content_item'>
+
+                <div class='content_item_top flex'>
+                    <div class='avatar img_s_cover'></div>
+                    <div class='comment_message flex_c flex_j_b box_b_b'>
+                        <div class='comment_name'>王一然</div>
+                        <div class='comment_time'>2019-4-16 <span>12:44</span></div>
+                    </div>
+                </div>
+
+                <p class='comment_content_text'>
+                    这是我第一次朗读。
+                </p>
+
+				<!-- 播放器模块,播放进度只需改变当前进度条的left值即可(当前进度条.style.left=当前播放时长/总时长*100+'%')， -->
+				<div class='player w_100 flex'>
+					<div class="play inline_block">
+						<div class='play_btn' onClick="begin()"></div>
+					</div>
+					<div class="progress_box inline_block pos_r box_b_b">
+						<div class='progress progress_sum w_100 pos_a'></div>
+						<div class='progress progress_current pos_a' id='progress_current'></div>
+						<div class='progress_btn pos_a' id='progress_btn'></div>
+						<div class='initTime pos_a'>00:00</div>
+						<div class='sumTime pos_a'>--:--</div>
+					</div>	
+				</div>
+
+				<!-- 评论书链接内容 -->
+				<div class='comment_book_link flex flex_j_b wh_100'>
+					<div class='comment_book_link_cover'>
+						<img class='wh_100' src="" alt="" />
+					</div>
+					<div class='comment_book_link_content'>
+						<div class='book_link_title'></div>
+						<div class='book_link_introduction'></div>
+					</div>
+				</div>
+				<!-- 评论次数、点赞及评论数 -->
+                <div class='content_item_bottom flex flex_j_b'>
+                    <p class='read_count'>
+                        浏览32次
+                    </p>
+                    <div class='operation_icon flex flex_j_b'>
+                        <div class='book_comment_icon flex flex_j_b'>
+                            <div class='comment_icon'>
+                                <img src="./images/icon/comment.png" alt="" />
+                            </div>
+                            <div>
+                                <p>9</p>
+                            </div>
+                        </div>
+                        <div class='book_comment_icon flex flex_j_b'>
+                            <div class='fabulous_icon'>
+                                <img src="./images/icon/fabulous.png" alt="" />
+                            </div>
+                            <div>
+                                <p>8</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 分割div，除第一个评论内容代码外，每个评论内容代码前需加一个分割div -->
+        <div class='division'></div>
+
+        <!-- 评论内容代码（拷贝） -->
+        <div class='w_100 empty_content box_b_b comment_content_list'>
+            <div class='comment_content_item'>
+
+                <div class='content_item_top flex'>
+                    <div class='avatar img_s_cover'></div>
+                    <div class='comment_message flex_c flex_j_b box_b_b'>
+                        <div class='comment_name'>王一然</div>
+                        <div class='comment_time'>2019-4-16 <span>12:44</span></div>
+                    </div>
+                </div>
+
+                <p class='comment_content_text'>
+                    鲁迅的《朝花夕拾》是一本需要慢慢品味才能知作者心的书，我读了很多遍，直到今天合上书本，才终于对其中几篇有所领悟。
+                </p>
+
+                <div class='content_item_bottom flex flex_j_b'>
+                    <p class='read_count'>
+                        浏览32次
+                    </p>
+                    <div class='operation_icon flex flex_j_b'>
+                        <div class='book_comment_icon flex flex_j_b'>
+                            <div class='comment_icon'>
+                                <img src="./images/icon/comment.png" alt="" />
+                            </div>
+                            <div>
+                                <p>9</p>
+                            </div>
+                        </div>
+                        <div class='book_comment_icon flex flex_j_b'>
+                            <div class='fabulous_icon'>
+                                <img src="./images/icon/fabulous.png" alt="" />
+                            </div>
+                            <div>
+                                <p>8</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+	<!-- 评论输入框 -->
+	<div class='comment_public_box flex flex_j_b w_100 box_b_b footer flex_a_c'>
+		<div class='comment_input_box h_100'><input type="text" class='wh_100 box_b_b' placeholder='写评论'/></div>
+		<div class='comment_button_box'><button class='my_btn_blue wh_100'>发表</button></div>
+	</div>
+	
+</body>
+<script src='js/progress.js'></script>
+</html>
