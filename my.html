@@ -61,6 +61,14 @@
             color: #3388FF;
             border-bottom: 2px solid #3388FF;
         }
+
+        /*tab切换*/
+        .tab_list{
+            display: none;
+        }
+        .show{
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -88,27 +96,54 @@
                 </li>
             </ul>
         </div>
-        <ul class="my_tab_list bg_white flex  flex_j_a">
+        <ul class="my_tab_list bg_white flex flex_j_a">
             <li class="active">正在阅读</li>
             <li>阅读完成</li>
             <li>收藏图书</li>
         </ul>
-        <div class="margin_top20 padding_30 bg_white">
-            <ul class="books books_ma_63 flex flex_wrap">
-                <li class="flex_c pa_bottom_40">
-                    <div class="book_img add_icon"></div>
-                </li>
-                <li class="flex_c pa_bottom_40">
-                    <div class="book_img">
-                        <img src="images/book_cover.png" alt="">
-                    </div>
-                </li>
-                <li class="flex_c pa_bottom_40">
-                    <div class="book_img">
-                        <img src="images/book_cover.png" alt="">
-                    </div>
-                </li>
-            </ul>
+        <div class="tab_list show">
+            <div class="margin_top20 padding_30 bg_white">
+                <ul class="books books_ma_63 flex flex_wrap">
+                    <li class="flex_c pa_bottom_40">
+                        <div class="book_img add_icon"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab_list">
+            <div class="margin_top20 padding_30 bg_white">
+                <ul class="books books_ma_63 flex flex_wrap">
+                    <li class="flex_c pa_bottom_40">
+                        <div class="book_img">
+                            <img src="images/book_cover.png" alt="">
+                        </div>
+                    </li>
+                    <li class="flex_c pa_bottom_40">
+                        <div class="book_img">
+                            <img src="images/book_cover.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab_list">
+            <div class="margin_top20 padding_30 bg_white">
+                <ul class="books books_ma_63 flex flex_wrap">
+                    <li class="flex_c pa_bottom_40">
+                        <div class="book_img add_icon"></div>
+                    </li>
+                    <li class="flex_c pa_bottom_40">
+                        <div class="book_img">
+                            <img src="images/book_cover.png" alt="">
+                        </div>
+                    </li>
+                    <li class="flex_c pa_bottom_40">
+                        <div class="book_img">
+                            <img src="images/book_cover.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
         <!-- 猜你喜欢 -->
         <div class="margin_top20 padding_30 bg_white">
@@ -173,4 +208,24 @@
         </div>
     </footer>
 </body>
+<script>
+    var tabs = document.getElementsByClassName('my_tab_list')[0].querySelectorAll('li'),
+        contents = document.querySelectorAll('.tab_list');
+        (function changeTab() {
+            for(var i = 0, len = tabs.length; i < len; i++) {
+                tabs[i].onmouseover = showTab;
+            }
+        })();
+        function showTab() {
+            for(var i = 0, len = tabs.length; i < len; i++) {
+                if(tabs[i] === this) {
+                    tabs[i].className = 'active';
+                    contents[i].className = 'show';
+                } else {
+                    tabs[i].className = '';
+                    contents[i].className = 'tab_list';
+                }
+            }
+        }
+</script>
 </html>

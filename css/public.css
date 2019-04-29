@@ -79,7 +79,7 @@ body{
 .player{
 	height:1rem;
 	background:#EEEEEE;
-	margin-top:.32rem;
+	margin-bottom:.32rem;
 }
 .play{
 	width:1.1rem;
@@ -393,10 +393,13 @@ body{
 	width:.24rem;
 	height:.24rem;
 	border-radius:50%;
-	border:.01rem solid #fff;
+	border:1px solid #fff;
 	top:-.05rem;
 	right:-.1rem;
-	background:#666
+	background:#666;
+	background-image: url(../images/finish_btn.png);
+	background-repeat: no-repeat;
+	background-size: .24rem;
 }
 
 /*reaction_to_article.html引用的样式*/
@@ -555,8 +558,6 @@ body{
 .add_book_box{
 	margin-left:.5rem;
 }
-
-
 /*每日推荐/必读书籍列表*/
 .recommend.border_padding_bottom{
 	padding: .45rem 0;
@@ -675,6 +676,7 @@ body{
 }
 .dynamic_content_list .dynamic_text{
 	padding: .3rem 0;
+	line-height: .4rem;
 }
 .dynamic_content_list .dynamic_recommend{
 	background-color: #EEEEEE;
