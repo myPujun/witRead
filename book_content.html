@@ -278,10 +278,10 @@
 						$('footer').style.display = 'none'
 					}
 					for(let j=0;j<content.length;j++){
-					$(content[j].id).style.display = 'none'
+					content[j].style.display = 'none'
 					select_nav[j].className = 'content_nav_item_text'
 					if(i==j){
-						$(content[j].id).style.display = 'block'
+						content[j].style.display = 'block'
 						select_nav[i].className = 'content_nav_item_text selected'
 					}
 					
