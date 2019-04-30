@@ -609,7 +609,8 @@ body{
 	-webkit-line-clamp: 2;
 }
 .recommend .message .writer{
-	color: #7E7E7E;
+    color: #7E7E7E;
+    font-size: .28rem;
 }
 .recommend .message .star_list span{
     color: #6D6D6D;
